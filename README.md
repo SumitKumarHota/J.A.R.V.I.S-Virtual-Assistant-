@@ -39,6 +39,7 @@ jarvis/
 ├── assets/                  # .mp4 file tutorial file 
 ├── requirements.txt
 ├── README.md
+├── LICENSE
 ```
 
 ---
@@ -60,7 +61,7 @@ jarvis/
 
 4. Run 'main.py' and speak:  
    ```bash
-   python main.py
+   jarvis
    ```
 
 ---
