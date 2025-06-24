@@ -32,15 +32,20 @@ Currently entering 3rd year (5th semester)
 ```
 jarvis/
 ├── main.py
+├── user voice input.py
 ├── modules/                 # Python modules (auth, commands, etc.)
 ├── user voice input.py      # Profile voice sample recorder script
 ├── voice_profiles/          # Stores user .wav samples
 ├── config/                  # .txt files (eng_playlist, birthday, city, state, custom_commands, song_dir etc.) 
-├── assets/                  # .mp4 file tutorial file 
+├── assets/                  # .mp4 demo file (jarvis demo.mp4)
 ├── requirements.txt
 ├── README.md
 ├── LICENSE
 ```
+
+## 🎥 Demo
+
+▶️ [Watch Jarvis Voice Assistant Demo (2:22)](./assets/Jarvis demo.mp4)
 
 ---
 
@@ -51,7 +56,7 @@ jarvis/
    pip install -r requirements.txt
    ```
 
-2. Add your '.wav' voice sample using the provided profile recorder script
+2. Add your '.wav' voice sample using the provided profile recorder script (user voice input.py)
 
 3. Set up your '.txt' files:  
    - 'song_dir.txt', 'video_dir.txt' – directory paths to local files  
