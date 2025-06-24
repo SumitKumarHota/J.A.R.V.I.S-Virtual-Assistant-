@@ -32,7 +32,6 @@ Currently entering 3rd year (5th semester)
 ```
 jarvis/
 ├── main.py
-├── user voice input.py
 ├── modules/                 # Python modules (auth, commands, etc.)
 ├── user voice input.py      # Profile voice sample recorder script
 ├── voice_profiles/          # Stores user .wav samples
