@@ -50,23 +50,53 @@ jarvis/
 
 ## 🛠️ How to Use
 
-1. Install dependencies:  
+### ✅ Step 1: Install Required Dependencies
+
+Make sure Python is installed. Then:
+
+1. Open the folder that contains this project (where `requirements.txt` is located).
+2. Click the folder's address bar and type `cmd`, then press **Enter** to open Command Prompt.
+3. Now run:
    ```bash
    pip install -r requirements.txt
    ```
 
-2. Add your '.wav' voice sample using the provided profile recorder script
+📌 This installs all necessary modules — like `speechrecognition`, `pyttsx3`, `resemblyzer`, etc.
 
-3. Set up your '.txt' files:  
-   - 'song_dir.txt', 'video_dir.txt' – directory paths to local files  
-   - 'custom_commands.txt' – map commands to responses  
-   - 'state.txt', 'city.txt' – for local news & weather  
-   - 'birthday.txt' – your DOB in `DD-MM` format
+💡 If `pip` isn’t recognized, try:
+```bash
+python -m pip install -r requirements.txt
+```
 
-4. Run 'main.py' and speak:  
-   ```bash
-   python main.py
-   ```
+---
+
+### ✅ Step 2: Set Up Configuration Files
+
+Inside the `config/` folder:
+
+- `custom_commands.txt` – define your custom voice commands and responses
+- `song_dir.txt`, `video_dir.txt` – add full directory paths to your local media folders
+- `state.txt`, `city.txt` – for news and weather scraping
+- `birthday.txt` – your birthdate in `DD-MM` format
+
+Also:
+- Add your voice profiles in `voice_profiles/` using the recorder script `user voice input.py`.
+
+---
+
+### ✅ Step 3: Run Jarvis
+
+Launch Jarvis with:
+```bash
+python main.py
+```
+
+Say **"Jarvis"** to activate and give commands like:  
+🕒 *"What time is it?"*  
+🎶 *"Play Faded"*  
+🌤️ *"What’s the weather?"*  
+📺 *"Play video XYZ"*  
+📚 *"Search dogs on Wikipedia"*
 
 ---
 
