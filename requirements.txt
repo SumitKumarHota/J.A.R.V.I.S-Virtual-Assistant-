@@ -1,0 +1,16 @@
+pyttsx3
+numpy
+resemblyzer
+torch
+SpeechRecognition
+requests
+beautifulsoup4
+wikipedia
+mysql-connector-python
+pywhatkit
+pyjokes
+pytube
+pathlib2
+winshell
+comtypes
+pycaw
