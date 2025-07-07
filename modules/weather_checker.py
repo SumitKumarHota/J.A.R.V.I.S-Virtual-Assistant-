@@ -1,6 +1,7 @@
 import requests
 from bs4 import BeautifulSoup
 from modules.speech_engine import speak
+import time
 
 def temperature():
     try:
