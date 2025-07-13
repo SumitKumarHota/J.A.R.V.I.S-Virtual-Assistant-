@@ -73,27 +73,30 @@ def takeCommand():
         try:
             with sr.Microphone() as source:
                 print("Listening...")
-                r.adjust_for_ambient_noise(source)  # To account for ambient noise
+                r.adjust_for_ambient_noise(source)
                 audio = r.listen(source, timeout=15, phrase_time_limit=15)
                 print("Recognizing...")
-                query = r.recognize_google(audio, language="en-us")
-                print(f"Command: {query}")
-                return query.lower()
-
-        except sr.WaitTimeoutError:
-            print("Timeout Error: No speech detected.")
-            continue
+                audio_data = audio.get_wav_data()
+                
+                try:
+                    query = r.recognize_google(audio, language="en-us")
+                    print(f"Command: {query}")
+                    return query, audio_data
+                except sr.UnknownValueError:
+                    print("Sorry, I did not understand that.")
+                    return "", audio_data  # Return empty string with audio data
+                except sr.RequestError:
+                    print("Sorry, the speech service is down.")
+                    return "", None
+                    
         except OSError as e:
             if "Unanticipated host error" in str(e) or "Stream closed" in str(e):
                 print("Audio device disconnected or not found. Reinitializing...")
-                time.sleep(1)  # Delay before retrying to allow for device reconnection
+                time.sleep(1)
                 continue
-        except sr.UnknownValueError:
-            print("Sorry, I did not understand that.")
-            continue
-        except sr.RequestError:
-            print("Sorry, the speech service is down.")
-            continue
+            else:
+                print(f"An error occurred: {e}")
+                return "", None
         except Exception as e:
             print(f"An error occurred: {e}")
-            continue
+            return "", None
