@@ -127,7 +127,7 @@ If you say **"Jarvis"** first (to activate, as usual), then ask something that i
 1. Get a free API key from [console.groq.com/keys](https://console.groq.com/keys).
 2. Double-click `groq_api_key_input.py` (or run `python groq_api_key_input.py`) and paste your key when prompted. It's saved locally to `config/groq_key.txt` (git-ignored, never uploaded anywhere).
 
-That's it — no other setup needed. If no key has been saved yet, Jarvis will let you know once via voice instead of failing silently.
+That's it no other setup needed. If no key has been saved yet, Jarvis will let you know once via voice instead of failing silently.
 
 ---
 
