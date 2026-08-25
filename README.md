@@ -1,3 +1,48 @@
+# Jarvis – Python Voice Assistant
+
+A modular Python-based voice assistant created by **Sumit Kumar Hota**, originally built as a CBSE 12th-grade final project and continuously improved through college. Jarvis handles real-time speech recognition, user authentication, media playback, weather/news scraping, system control, dynamic voice interactions, and AI-powered Q&A — all using customizable `.txt` configuration files.
+
+## 👤 About the Developer
+
+**Sumit Kumar Hota**\
+B.Tech CSE Student, ITER, Siksha 'O' Anusandhan University, Bhubaneswar\
+Currently entering 3rd year (5th semester)
+
+---
+
+## 🚀 Key Features
+
+- 🔐 Multi-user voice authentication via recorded `.wav` profiles
+- 🎵 Local music/video playback with custom search fallback to YouTube
+- 📁 Auto-generated playlists (`hindi.txt`, `english.txt`, `mix.txt`) for random playback
+- 🌐 Voice-activated web search (Google, YouTube, Wikipedia)
+- 💬 Custom command-to-response via `custom_commands.txt` with multiple randomized responses
+- 📅 Time-based greetings + birthday wish (uses `birthday.txt` + system date)
+- 🌤️ Location-based news & weather (via web scraping with `state.txt`, `city.txt`)
+- 📂 Voice-based app launcher using file paths defined in `.txt` files
+- 🗑️ System utilities: empty recycle bin, shutdown, restart, sign out, close apps
+- 🌍 Location finder: open earth.google.com with specific landmarks
+- 🌐 Web access to Gmail, Instagram, WhatsApp, YouTube, Facebook, Spotify, Discord, Maps, Drive, and more
+- 📡 Smart startup: retries internet connection 3 times before exit if offline
+- 🤖 AI fallback via the free Groq API — say "Jarvis" then ask any question not covered by a predefined command
+
+---
+
+## 📁 Directory Structure
+
+```
+jarvis/
+├── main.py
+├── groq_api_key_input.py    # Double-click to enter/save your Groq API key
+├── modules/                 # Python modules (auth, commands, ai_qa, etc.)
+├── user voice input.py      # Profile voice sample recorder script
+├── voice_profiles/          # Stores user .wav samples
+├── config/                  # .txt files (birthday, city, state, custom_commands, song_dir, groq_key etc.)
+├── assets/                  # .mp4 demo file (jarvis demo.mp4)  
+├── requirements.txt
+├── README.md
+├── LICENSE.txt
+```
 
 ## 🎥 Demo
 
@@ -21,7 +66,7 @@ Make sure Python is installed. Then:
 
    1. Download and install **Visual Studio Build Tools 2022** (with Windows 11 SDK):
       - Visit: [https://visualstudio.microsoft.com/vs/preview/#download-preview](https://visualstudio.microsoft.com/vs/preview/#download-preview)
-      - Click **"Download Preview"** for **Visual Studio Community**.
+      - Click **“Download Preview”** for **Visual Studio Community**.
    2. In the installer, select the following components:
       - ✅ **MSVC v143 – VS 2022 C++ x64/x86 build tools (Latest)**
       - ✅ **Windows 11 SDK (10.0.26100.3916)**
@@ -31,13 +76,13 @@ Make sure Python is installed. Then:
 
 4. Now run:
 
-```bash
+   ```bash
    pip install -r requirements.txt
-```
+   ```
 
 📌 This installs all necessary modules — like `speechrecognition`, `pyttsx3`, `resemblyzer`, `groq`, etc.
 
-💡 If `pip` isn't recognized, try:
+💡 If `pip` isn’t recognized, try:
 
 ```bash
 python -m pip install -r requirements.txt
@@ -68,7 +113,7 @@ python main.py
 Say **"Jarvis"** to activate and give commands like:\
 🕒 "What time is it?"\
 🎶 "Play Faded"\
-🌤️ "What's the weather?"\
+🌤️ "What’s the weather?"\
 📺 "Play video XYZ"\
 📚 "Search dogs on Wikipedia"
 
